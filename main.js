@@ -1,6 +1,6 @@
 // Functions
 function gcd (a, b) {
-    return (b == 0) ? a : gcd (b, a%b);
+  return (b == 0) ? a : gcd (b, a%b);
 }
 
 function res_in (str) {
@@ -55,14 +55,14 @@ function update() {
   img_url = "./img/" + option_res_in.value + ".png";
   document.getElementById("image_original").src = img_url;
 
-// Set size of image container and adjust for output aspect ratio
+  // Set size of image container and adjust for output aspect ratio
   container_w = 180/out_aspect_h*out_aspect_w;
   container_h = 180;
   img_coll = document.getElementsByClassName("img");
   for(var i=0, len=img_coll.length; i<len; i++)
   {
-      img_coll[i].style.width = container_w + "px";
-      img_coll[i].style.height = container_h + "px";
+    img_coll[i].style.width = container_w + "px";
+    img_coll[i].style.height = container_h + "px";
   }
 
   // Set size of integer scaled image container
@@ -76,25 +76,23 @@ function update() {
   container_cut_h = (res_in_h - h_cutoff_pixels ) * int_multi_withcutoff / res_out_h * container_h;
   document.getElementById("image_cutoff_div").style.width = container_cut_w + "px";
   document.getElementById("image_cutoff_div").style.height = container_cut_h + "px";
-//  document.getElementById("image_cutoff").style.clipPath = "inset("+ Math.floor(h_cutoff_pixels/2) +"px "+ Math.floor(v_cutoff_pixels/2) +"px "+ h_cutoff_pixels-Math.floor(h_cutoff_pixels/2) +"px "+ v_cutoff_pixels-Math.floor(v_cutoff_pixels/2) +"px)";
-//  document.getElementById("image_cutoff").style.clipPath = "inset(10px 10px 10px 10px)";
 
-// Set size of integer image
-image_int_w = res_in_w * int_multi_nocutoff / res_out_w * container_w;
-image_int_h = res_in_h * int_multi_nocutoff / res_out_h * container_h;
-document.getElementById("image_integer").width = image_int_w;
-document.getElementById("image_integer").height = image_int_h;
+  // Set size of integer image
+  image_int_w = res_in_w * int_multi_nocutoff / res_out_w * container_w;
+  image_int_h = res_in_h * int_multi_nocutoff / res_out_h * container_h;
+  document.getElementById("image_integer").width = image_int_w;
+  document.getElementById("image_integer").height = image_int_h;
 
-// Set size of cutoff image
-image_cut_w = res_in_w * int_multi_withcutoff / res_out_w * container_w;
-image_cut_h = res_in_h * int_multi_withcutoff / res_out_h * container_h;
-document.getElementById("image_cutoff").width = image_cut_w;
-document.getElementById("image_cutoff").height = image_cut_h;
+  // Set size of cutoff image
+  image_cut_w = res_in_w * int_multi_withcutoff / res_out_w * container_w;
+  image_cut_h = res_in_h * int_multi_withcutoff / res_out_h * container_h;
+  document.getElementById("image_cutoff").width = image_cut_w;
+  document.getElementById("image_cutoff").height = image_cut_h;
 
-document.getElementById("image_integer").src = img_url;
-document.getElementById("image_cutoff").src = img_url;
-
+  document.getElementById("image_integer").src = img_url;
+  document.getElementById("image_cutoff").src = img_url;
 
 }
 
+//Code to run on load
 update();
