@@ -1,0 +1,25 @@
+div.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.img_container {
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+img.image_original {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+div.image_integer, div.image_cutoff {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
