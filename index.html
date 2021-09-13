@@ -10,20 +10,32 @@
   <div class="section_title">Emulated Device Resolution:</div>
   <div class="section_body">
     <select id="res_in" name="res_in" onchange="update()">
-      <option value="160x144-gb">160 x 144 (GameBoy)</option>
-      <option value="240x160-gba">240 x 160 (GBA)</option>
-      <option value="256x192-ds">256 x 192 (DS single screen)</option>
-      <option value="256x224-nes">256 x 224 (NES)</option>
-      <option value="256x224-snes">256 x 224 (SNES)</option>
-      <option value="320x224-md">320 x 224 (Mega Drive/Genesis)</option>
-      <option value="320x200-dos">320 x 200 (DOS)</option>
-      <option value="320x240-dos">320 x 240 (DOS)</option>
-      <option value="400x240-3ds">400 x 240 (3DS)</option>
-      <option value="480x272-psp">480 x 272 (PSP)</option>
-      <option value="640x480-dc">640 x 480 (Dreamcast)</option>
-      <option value="1280x720-ps3">1280 x 720 (720p)</option>
-      <option value="1920x1080">1920 x 1080 (1080p)</option>
-      <option disabled value="custom">Custom</option>
+      <optgroup label="Nintendo">
+        <option value="160x144-gb">160 x 144 (GameBoy)</option>
+        <option value="240x160-gba">240 x 160 (GBA)</option>
+        <option value="256x192-ds">256 x 192 (DS single screen)</option>
+        <option value="256x224-nes">256 x 224 (NES)</option>
+        <option value="256x224-snes">256 x 224 (SNES)</option>
+        <option value="400x240-3ds">400 x 240 (3DS top screen)</option>
+      </optgroup>
+      <optgroup label="Sega">
+        <option value="256x192-ms">256 x 192 (Master System)</option>
+        <option value="320x224-md">320 x 224 (Mega Drive/Genesis)</option>
+        <option value="640x480-dc">640 x 480 (Dreamcast)</option>
+      </optgroup>
+      <optgroup label="Sony">
+        <option value="480x272-psp">480 x 272 (PSP)</option>
+        <option value="1280x720-ps3">1280 x 720 (PS3 720p)</option>
+      </optgroup>
+      <optgroup label="Arcade">
+        <option value="384x224-cps">384 x 224 (CPS)</option>
+        <option value="400x254-midt">400 x 254 (Midway T Unit)</option>
+      </optgroup>
+      <optgroup label="Computers">
+        <option value="320x200-dos">320 x 200 (DOS)</option>
+        <option value="320x240-dos">320 x 240 (DOS)</option>
+      </optgroup>
+      <!-- <option disabled value="custom">Custom</option> -->
 
     </select>
     <div class="floater">
@@ -51,11 +63,12 @@
     <option value="1680x1050">1680 x 1050</option>
     <option value="1920x1080" selected>1920 x 1080 (1080p)</option>
     <option value="1600x1440">1600 x 1440 (Analogue Pocket)</option>
+    <option value="2560x1440">2560 x 1440</option>
     <option value="3440x1440">3440 x 1440</option>
     <option value="2560x1600">2560 x 1600</option>
     <option value="3840x2160">3840 x 2160 (4K)</option>
     <option value="7680x4320">7680 x 4320 (8K)</option>
-    <option disabled value="custom">Custom</option>
+    <!-- <option disabled value="custom">Custom</option> -->
 
   </select>
   <div class="floater">
