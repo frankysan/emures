@@ -64,6 +64,11 @@ function update() {
     img_coll[i].style.width = container_w + "px";
     img_coll[i].style.height = container_h + "px";
   }
+  img_sub_coll = document.getElementsByClassName("img_sub");
+  for(var i=0, len=img_sub_coll.length; i<len; i++)
+  {
+    img_sub_coll[i].style.width = container_w + "px";
+  }
 
   // Set size of integer scaled image container
   container_int_w =  res_in_w * int_multi_nocutoff / res_out_w * container_w;
